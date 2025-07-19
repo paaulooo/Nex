@@ -11,11 +11,11 @@ Nex é um projeto pessoal que visa ser um sistema completo de RH, auxiliando a e
 
 ## Tecnologias Utilizadas
 
-- Java 22.0.1
-- Spring Boot
-- JDBC
-- MySQL
-- oAuth2
+- **Java 22.0.1**
+- **Spring Boot**
+- **JDBC**
+- **MySQL**
+- **oAuth2**
 
 
 
