@@ -1,5 +1,7 @@
 
-![Logo]()
+<p align="center" width="100%">
+    <img width="300" src="logo_nobg.png">
+</p>
 
 
 
@@ -27,5 +29,4 @@ Nex é um projeto pessoal que visa ser um sistema completo de RH, auxiliando a e
 
 ## Screenshots
 
-![App Screenshot]()
 
