@@ -1,6 +1,6 @@
 package com.nexus;
 
-public class Funcionario {
+public abstract class Funcionario {
     private String nome;
     private String cpf;
     private String rg;
@@ -8,6 +8,8 @@ public class Funcionario {
     private String endereco;
     private String area;
     private String cargo;
+
+
 
     //Constructor
     public Funcionario(String nome, String cpf, String rg, double sal, String endereco, String area, String cargo) {
