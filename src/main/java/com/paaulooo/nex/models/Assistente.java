@@ -1,11 +1,20 @@
 package com.paaulooo.nex.models;
 
-public class Assistente implements Colaborador,  Remuneracao {
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+
+@EqualsAndHashCode(callSuper = true)
+@Data
+public class Assistente extends Colaborador implements MostraColaborador,  Remuneracao {
     private String nome;
     private String cargo;
     private String area;
     private double salarioBase;
     private int horasExtras;
+
+    public Assistente(String nome, String cargo, String area, double salarioBase, int horasExtras) {
+        super(nome, cargo, area, salarioBase, horasExtras);
+    }
 
     @Override
     public String getNomeColaborador() {
