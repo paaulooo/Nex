@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 @Data
 
-public class Admin extends  Colaborador implements MostraColaborador,Remuneracao{
+public class Admin extends Colaborador implements Remuneracao{
 
     private String nome;
     private String cargo;
@@ -22,15 +22,6 @@ public class Admin extends  Colaborador implements MostraColaborador,Remuneracao
         super(nome, cargo, area, salarioBase, horasExtras);
     }
 
-    @Override
-    public String getNomeColaborador() {
-        return nome;
-    }
-
-    @Override
-    public String getCargoColaborador() {
-        return String.format("%s de %s", cargo, area);
-    }
 
     @Override
     public double remunerar() {

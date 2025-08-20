@@ -5,7 +5,7 @@ import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class Assistente extends Colaborador implements MostraColaborador,  Remuneracao {
+public class Assistente extends Colaborador implements Remuneracao {
     private String nome;
     private String cargo;
     private String area;
@@ -16,15 +16,6 @@ public class Assistente extends Colaborador implements MostraColaborador,  Remun
         super(nome, cargo, area, salarioBase, horasExtras);
     }
 
-    @Override
-    public String getNomeColaborador() {
-        return nome;
-    }
-
-    @Override
-    public String getCargoColaborador() {
-        return String.format("%s de %s", cargo, area);
-    }
 
     @Override
     public double remunerar() {

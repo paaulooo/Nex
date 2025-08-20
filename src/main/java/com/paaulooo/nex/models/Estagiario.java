@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @EqualsAndHashCode(callSuper = true)
 @Data
 
-public class Estagiario extends Colaborador implements MostraColaborador, Remuneracao{
+public class Estagiario extends Colaborador implements Remuneracao{
     private String nome;
     private String cargo;
     private String area;
@@ -17,16 +17,6 @@ public class Estagiario extends Colaborador implements MostraColaborador, Remune
 
     public Estagiario(String nome, String cargo, String area, double salarioBase, int horasExtras) {
         super(nome, cargo, area, salarioBase, horasExtras);
-    }
-
-    @Override
-    public String getNomeColaborador() {
-        return nome;
-    }
-
-    @Override
-    public String getCargoColaborador() {
-        return String.format("%s de %s", cargo, area);
     }
 
     @Override
