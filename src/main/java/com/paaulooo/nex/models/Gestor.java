@@ -9,11 +9,12 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-@EqualsAndHashCode(callSuper = true)
 @Data
 @NoArgsConstructor
+@EqualsAndHashCode(callSuper = true)
 @Entity
-public class Estagiario extends Colaborador implements Remuneracao{
+public class Gestor extends Colaborador implements Remuneracao{
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -23,12 +24,12 @@ public class Estagiario extends Colaborador implements Remuneracao{
     private double bolsa;
     private int horasExtras;
 
-    public Estagiario(long id, String nome, String cargo, String area, double bolsa, int horasExtras) {
-        super(id ,nome, cargo, area, bolsa, horasExtras);
+    public Gestor(long id, String nome, String cargo, String area, double salarioBase, int  horasExtras) {
+        super(id ,nome, cargo, area, salarioBase, horasExtras);
     }
 
     @Override
     public double remunerar() {
-        return bolsa;
+        return 0;
     }
 }

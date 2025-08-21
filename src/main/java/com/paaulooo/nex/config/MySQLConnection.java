@@ -18,7 +18,7 @@ public class MySQLConnection {
         return DataSourceBuilder.create()
                 .driverClassName(driverClass)
                 .url(url)
-                .url(user)
+                .username(user)
                 .password(password).
                 build();
     }
