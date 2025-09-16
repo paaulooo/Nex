@@ -25,6 +25,12 @@ public class CargoService {
         cargo.setDescricao(dto.getDescricao());
         return cargoRepository.save(cargo);
     }
+    public Cargo updateCargo(Long id, CargoDTO dto){
+        Cargo cargo = cargoRepository.findById(id).orElseThrow(() -> new RuntimeException("Cargo não encontrado"));
+        cargo.setNome(dto.getNome());
+        cargo.setDescricao(dto.getDescricao());
+        return cargoRepository.save(cargo);
+    }
 
 
 }
