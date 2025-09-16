@@ -31,6 +31,10 @@ public class ColaboradorController {
     public ResponseEntity<List<Colaborador>> findAll(){
         return ResponseEntity.ok(colaboradorService.showAllColaboradores());
     }
+    @GetMapping("/{id}")
+    public ResponseEntity<List<Colaborador>> findById(@PathVariable Long id){
+        return ResponseEntity.ok(colaboradorService.showColaboradorByID(id));
+    }
 
     @PostMapping
     public ResponseEntity<Colaborador> saveColaborador(@RequestBody @Valid ColaboradorDTO dto){

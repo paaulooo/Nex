@@ -50,5 +50,8 @@ public class ColaboradorService {
     public List<Colaborador> showAllColaboradores(){
         return colaboradorRepository.findAll();
     }
+    public List<Colaborador> showColaboradorByID(Long id){
+        return colaboradorRepository.findById(id).stream().toList();
+    }
 
 }
