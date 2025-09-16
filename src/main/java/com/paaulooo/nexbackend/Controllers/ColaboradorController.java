@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
+// CRUD MAPPINGS
 
 @RestController
 @RequiredArgsConstructor
