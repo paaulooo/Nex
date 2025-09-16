@@ -53,5 +53,8 @@ public class ColaboradorService {
     public List<Colaborador> showColaboradorByID(Long id){
         return colaboradorRepository.findById(id).stream().toList();
     }
+    public List<Colaborador> showColaboradorByName(String nome){
+        return colaboradorRepository.findByNomeContainingIgnoreCase(nome);
+    }
 
 }
