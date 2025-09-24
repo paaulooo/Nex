@@ -14,9 +14,11 @@ Nex é um projeto pessoal que visa ser um sistema completo de RH, auxiliando a e
 
 - **Java 17**
 - **Spring Boot**
-- **JDBC**
 - **MySQL**
 - **JWT**
+- **Flyway**
+- **Thymeleaf**
+- **Postman para testes**
 
 
 
