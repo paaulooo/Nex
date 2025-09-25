@@ -3,15 +3,15 @@ package com.paaulooo.nexbackend.Models;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
 
@@ -54,14 +54,9 @@ public class Colaborador {
     @Size(min = 10, max = 15, message = "O telefone deve ter no máximo 15 caracteres!")
     private String telefone;
 
-
-//    // Metodos auxiliares
-//    public boolean isGestor() {
-//        return this.cargo != null && this.cargo.getHierarquia().isGestor();
-//    }
-//    public boolean isLider() {
-//        return this.cargo != null && this.cargo.getHierarquia().isLider();
-//    }
-
+    @Column(name = "cargo", nullable = false, length = 30)
+    @NotNull(message = "O Colaborador precisa ter um cargo!")
+    @Enumerated(EnumType.STRING)
+    private Cargo cargo;
 
 }

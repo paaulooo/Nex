@@ -25,6 +25,7 @@ public class ColaboradorService {
         if(dto.getNomeSocial() != null){
             colaborador.setNomeSocial(dto.getNomeSocial());
         }
+        colaborador.setCargo(dto.getCargo());
     }
 
     public Colaborador save(ColaboradorDTO dto){
@@ -33,13 +34,15 @@ public class ColaboradorService {
         return colaboradorRepository.save(colaborador);
     }
     public Colaborador update(Long id, ColaboradorDTO dto){
-        Colaborador colaborador = colaboradorRepository.findById(id).orElseThrow(() -> new RuntimeException("Colaborador não encontrado"));
+        Colaborador colaborador = colaboradorRepository.findById(id).orElseThrow(()
+                -> new RuntimeException("Colaborador não encontrado"));
         setUserValues(colaborador, dto);
         return  colaboradorRepository.save(colaborador);
     }
 
     public void delete(Long id){
-        Colaborador colaborador = colaboradorRepository.findById(id).orElseThrow(() -> new RuntimeException("Colaborador não encontrado"));
+        Colaborador colaborador = colaboradorRepository.findById(id).orElseThrow(()
+                -> new RuntimeException("Colaborador não encontrado"));
         colaboradorRepository.delete(colaborador);
     }
 
